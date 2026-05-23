@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kendry Núñez | Desarrollador Frontend</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        
+        :root {
+            --primary: #3b82f6;
+        }
+        
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+        }
+        
+        .hero-bg {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+        }
+        
+        .nav-link {
+            transition: all 0.3s ease;
+        }
+        
+        .nav-link:hover {
+            color: #3b82f6;
+            transform: translateY(-2px);
+        }
+        
+        .project-card {
+            transition: all 0.4s ease;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+        
+        .skill-pill {
+            transition: all 0.3s ease;
+        }
+        
+        .skill-pill:hover {
+            background-color: #3b82f6;
+            color: white;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="bg-zinc-50 text-zinc-800">
+    <!-- Navbar -->
+    <nav class="bg-white border-b sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-6 py-5 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-blue-600 rounded-2xl flex items-center justify-center text-white font-bold text-2xl">K</div>
+                <div>
+                    <h1 class="text-2xl font-semibold">Kendry Núñez</h1>
+                    <p class="text-sm text-zinc-500">Desarrollador Frontend</p>
+                </div>
+            </div>
+            
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+                <a href="#experiencia" class="nav-link">Experiencia</a>
+                <a href="#proyectos" class="nav-link">Proyectos</a>
+                <a href="#educacion" class="nav-link">Educación</a>
+                <a href="#habilidades" class="nav-link">Habilidades</a>
+            </div>
+            
+            <div class="flex items-center gap-4">
+                <a href="https://github.com/KENDRY05" target="_blank" 
+                   class="flex items-center gap-2 px-4 py-2 border border-zinc-300 rounded-full hover:bg-zinc-100 transition-colors">
+                    <i class="fab fa-github"></i>
+                    <span class="hidden sm:inline">GitHub</span>
+                </a>
+                <button onclick="contactar()" 
+                        class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2.5 rounded-full font-medium transition-colors">
+                    Contactar
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero-bg text-white py-24">
+        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <p class="text-blue-200 mb-3">👋 Hola, soy</p>
+                <h1 class="text-6xl md:text-7xl font-bold leading-tight mb-6">
+                    Kendry Núñez
+                </h1>
+                <p class="text-2xl text-blue-100 mb-8">
+                    Desarrollador Frontend especializado en crear experiencias digitales excepcionales
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <button onclick="document.getElementById('proyectos').scrollIntoView({ behavior: 'smooth' })" 
+                            class="bg-white text-blue-700 px-8 py-4 rounded-2xl font-semibold hover:bg-blue-50 transition-colors">
+                        Ver mis proyectos
+                    </button>
+                    <a href="https://github.com/KENDRY05" target="_blank"
+                       class="border border-white/50 hover:border-white px-8 py-4 rounded-2xl font-medium flex items-center gap-3 transition-colors">
+                        <i class="fab fa-github"></i>
+                        GitHub
+                    </a>
+                </div>
+                
+                <div class="mt-12 flex items-center gap-8 text-sm">
+                    <div>
+                        <p class="text-blue-200">Ubicación</p>
+                        <p class="font-medium">Chinandega, Nicaragua</p>
+                    </div>
+                    <div>
+                        <p class="text-blue-200">Disponible para</p>
+                        <p class="font-medium">Freelance / Proyectos</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="flex justify-center">
+                <div class="relative">
+                    <div class="w-80 h-80 bg-white/10 backdrop-blur-xl rounded-3xl p-3 shadow-2xl">
+                        <div class="w-full h-full bg-zinc-800 rounded-2xl overflow-hidden border-4 border-white/30">
+                            <!-- Placeholder para foto -->
+                            <div class="w-full h-full bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center">
+                                <div class="text-center">
+                                    <i class="fas fa-user-tie text-8xl text-white/80"></i>
+                                    <p class="text-white mt-6 text-xl font-medium">Kendry Núñez</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Decorative elements -->
+                    <div class="absolute -top-4 -right-4 bg-white text-zinc-900 rounded-2xl px-6 py-3 shadow-xl">
+                        <div class="flex items-center gap-2">
+                            <div class="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+                            <span class="font-medium">Disponible</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experiencia -->
+    <section id="experiencia" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-4xl font-bold mb-12 text-center">Experiencia Laboral</h2>
+            
+            <div class="space-y-12">
+                <!-- Proyecto App de Macros -->
+                <div class="grid md:grid-cols-12 gap-8 items-start">
+                    <div class="md:col-span-4">
+                        <div class="sticky top-8">
+                            <div class="inline-block bg-blue-100 text-blue-700 text-sm font-medium px-4 py-1 rounded-full mb-3">
+                                2026 — Actual
+                            </div>
+                            <h3 class="text-2xl font-semibold">App de Seguimiento de Macros</h3>
+                            <p class="text-blue-600 font-medium mt-1">Proyecto Personal</p>
+                        </div>
+                    </div>
+                    <div class="md:col-span-8">
+                        <div class="bg-zinc-50 border border-zinc-100 rounded-3xl p-8">
+                            <ul class="space-y-4 text-zinc-700">
+                                <li class="flex gap-3">
+                                    <i class="fas fa-check text-blue-500 mt-1"></i>
+                                    Desarrollo de aplicación móvil con <strong>React Native + Expo</strong>
+                                </li>
+                                <li class="flex gap-3">
+                                    <i class="fas fa-check text-blue-500 mt-1"></i>
+                                    Backend en <strong>Node.js</strong> y base de datos <strong>MySQL</strong>
+                                </li>
+                                <li class="flex gap-3">
+                                    <i class="fas fa-check text-blue-500 mt-1"></i>
+                                    Registro de alimentos y control de macronutrientes en tiempo real
+                                </li>
+                                <li class="flex gap-3">
+                                    <i class="fas fa-check text-blue-500 mt-1"></i>
+                                    Diseño de interfaces responsivas enfocadas en UX
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sistema Web para Gimnasio -->
+                <div class="grid md:grid-cols-12 gap-8 items-start">
+                    <div class="md:col-span-4">
+                        <div class="sticky top-8">
+                            <div class="inline-block bg-amber-100 text-amber-700 text-sm font-medium px-4 py-1 rounded-full mb-3">
+                                2025
+                            </div>
+                            <h3 class="text-2xl font-semibold">Sistema Web para Gimnasio</h3>
+                            <p class="text-blue-600 font-medium mt-1">Desarrollador Web</p>
+                        </div>
+                    </div>
+                    <div class="md:col-span-8">
+                        <div class="bg-zinc-50 border border-zinc-100 rounded-3xl p-8">
+                            <ul class="space-y-4 text-zinc-700">
+                                <li class="flex gap-3">
+                                    <i class="fas fa-check text-blue-500 mt-1"></i>
+                                    Gestión completa de membresías y pagos
+                                </li>
+                                <li class="flex gap-3">
+                                    <i class="fas fa-check text-blue-500 mt-1"></i>
+                                    Implementación de autenticación segura
+                                </li>
+                                <li class="flex gap-3">
+                                    <i class="fas fa-check text-blue-500 mt-1"></i>
+                                    Lector QR para control de acceso
+                                </li>
+                                <li class="flex gap-3">
+                                    <i class="fas fa-check text-blue-500 mt-1"></i>
+                                    Despliegue en <strong>Vercel</strong>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Landing Pages -->
+                <div class="grid md:grid-cols-12 gap-8 items-start">
+                    <div class="md:col-span-4">
+                        <div class="sticky top-8">
+                            <div class="inline-block bg-emerald-100 text-emerald-700 text-sm font-medium px-4 py-1 rounded-full mb-3">
+                                2025 — Actual
+                            </div>
+                            <h3 class="text-2xl font-semibold">Landing Pages &amp; UI</h3>
+                            <p class="text-blue-600 font-medium mt-1">Freelance</p>
+                        </div>
+                    </div>
+                    <div class="md:col-span-8">
+                        <div class="bg-zinc-50 border border-zinc-100 rounded-3xl p-8">
+                            <ul class="space-y-4 text-zinc-700">
+                                <li class="flex gap-3">
+                                    <i class="fas fa-check text-blue-500 mt-1"></i>
+                                    Conversión de diseños de <strong>Figma</strong> a código funcional
+                                </li>
+                                <li class="flex gap-3">
+                                    <i class="fas fa-check text-blue-500 mt-1"></i>
+                                    Interfaces modernas con React, HTML, CSS y JavaScript
+                                </li>
+                                <li class="flex gap-3">
+                                    <i class="fas fa-check text-blue-500 mt-1"></i>
+                                    Optimización para experiencia de usuario excepcional
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Proyectos -->
+    <section id="proyectos" class="py-20 bg-zinc-100">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-4xl font-bold mb-12 text-center">Proyectos Destacados</h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="project-card bg-white rounded-3xl overflow-hidden border border-zinc-100">
+                    <div class="h-52 bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center">
+                        <i class="fas fa-mobile-alt text-7xl text-white/80"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-semibold text-xl mb-2">App de Macros</h3>
+                        <p class="text-zinc-600 text-sm mb-4">Aplicación móvil para seguimiento nutricional con control de macronutrientes.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="skill-pill text-xs px-3 py-1 bg-zinc-100 rounded-full">React Native</span>
+                            <span class="skill-pill text-xs px-3 py-1 bg-zinc-100 rounded-full">Expo</span>
+                            <span class="skill-pill text-xs px-3 py-1 bg-zinc-100 rounded-full">Node.js</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card bg-white rounded-3xl overflow-hidden border border-zinc-100">
+                    <div class="h-52 bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center">
+                        <i class="fas fa-dumbbell text-7xl text-white/80"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-semibold text-xl mb-2">Gestión de Gimnasio</h3>
+                        <p class="text-zinc-600 text-sm mb-4">Sistema completo para administración de membresías y control de acceso.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="skill-pill text-xs px-3 py-1 bg-zinc-100 rounded-full">React</span>
+                            <span class="skill-pill text-xs px-3 py-1 bg-zinc-100 rounded-full">Vercel</span>
+                            <span class="skill-pill text-xs px-3 py-1 bg-zinc-100 rounded-full">QR</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card bg-white rounded-3xl overflow-hidden border border-zinc-100">
+                    <div class="h-52 bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center">
+                        <i class="fas fa-laptop-code text-7xl text-white/80"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-semibold text-xl mb-2">Landing Pages</h3>
+                        <p class="text-zinc-600 text-sm mb-4">Sitios web modernos convertidos desde diseños en Figma.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="skill-pill text-xs px-3 py-1 bg-zinc-100 rounded-full">Figma</span>
+                            <span class="skill-pill text-xs px-3 py-1 bg-zinc-100 rounded-full">Tailwind</span>
+                            <span class="skill-pill text-xs px-3 py-1 bg-zinc-100 rounded-full">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Educación -->
+    <section id="educacion" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16">
+                <div>
+                    <h2 class="text-4xl font-bold mb-8">Educación</h2>
+                    <div class="bg-zinc-50 border border-zinc-100 rounded-3xl p-10">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="text-xl font-semibold">Universidad Nacional Autónoma de Nicaragua (UNAN-León)</h3>
+                                <p class="text-blue-600 mt-2">Ingeniería en Tecnologías de la Información</p>
+                                <p class="mt-4 text-zinc-600">Énfasis en Desarrollo Web y Marketing Digital</p>
+                            </div>
+                            <div class="text-right">
+                                <span class="bg-zinc-200 text-zinc-700 px-4 py-1 rounded-full text-sm">2022 — Actualidad</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Habilidades -->
+                <div id="habilidades">
+                    <h2 class="text-4xl font-bold mb-8">Habilidades</h2>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                        <div class="skill-pill bg-white border border-zinc-200 px-6 py-4 rounded-2xl text-center font-medium">React</div>
+                        <div class="skill-pill bg-white border border-zinc-200 px-6 py-4 rounded-2xl text-center font-medium">React Native</div>
+                        <div class="skill-pill bg-white border border-zinc-200 px-6 py-4 rounded-2xl text-center font-medium">TypeScript</div>
+                        <div class="skill-pill bg-white border border-zinc-200 px-6 py-4 rounded-2xl text-center font-medium">JavaScript</div>
+                        <div class="skill-pill bg-white border border-zinc-200 px-6 py-4 rounded-2xl text-center font-medium">Tailwind CSS</div>
+                        <div class="skill-pill bg-white border border-zinc-200 px-6 py-4 rounded-2xl text-center font-medium">Figma</div>
+                        <div class="skill-pill bg-white border border-zinc-200 px-6 py-4 rounded-2xl text-center font-medium">Expo</div>
+                        <div class="skill-pill bg-white border border-zinc-200 px-6 py-4 rounded-2xl text-center font-medium">Node.js</div>
+                        <div class="skill-pill bg-white border border-zinc-200 px-6 py-4 rounded-2xl text-center font-medium">Git &amp; GitHub</div>
+                        <div class="skill-pill bg-white border border-zinc-200 px-6 py-4 rounded-2xl text-center font-medium">Vercel</div>
+                        <div class="skill-pill bg-white border border-zinc-200 px-6 py-4 rounded-2xl text-center font-medium">HTML5 / CSS3</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section class="bg-zinc-900 text-white py-20">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold mb-6">¿Hablemos?</h2>
+            <p class="max-w-md mx-auto text-zinc-400 mb-10">
+                Estoy abierto a nuevas oportunidades, colaboraciones y proyectos interesantes.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="mailto:aczinokendry1234@gmail.com" 
+                   class="inline-flex items-center justify-center gap-3 bg-white text-zinc-900 px-8 py-4 rounded-2xl font-semibold hover:bg-zinc-100 transition-colors">
+                    <i class="fas fa-envelope"></i>
+                    Enviar correo
+                </a>
+                <a href="tel:+50558427509" 
+                   class="inline-flex items-center justify-center gap-3 border border-white/30 hover:border-white/70 px-8 py-4 rounded-2xl font-semibold transition-colors">
+                    <i class="fas fa-phone"></i>
+                    +505 5842-7509
+                </a>
+            </div>
+            
+            <div class="mt-16 flex justify-center gap-8 text-2xl">
+                <a href="https://github.com/KENDRY05" target="_blank" class="hover:text-blue-400 transition-colors">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white py-8 border-t">
+        <div class="max-w-6xl mx-auto px-6 text-center text-sm text-zinc-500">
+            <p>© 2026 Kendry Núñez. Hecho con ❤️ en Nicaragua.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Tailwind script ya está incluido
+        function contactar() {
+            window.location.href = "mailto:aczinokendry1234@gmail.com";
+        }
+        
+        // Scroll suave para navegación
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                if (this.getAttribute('href') !== '#') {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
+        
+        // Animación simple al hacer scroll
+        window.addEventListener('scroll', () => {
+            const cards = document.querySelectorAll('.project-card');
+            cards.forEach((card, index) => {
+                const rect = card.getBoundingClientRect();
+                if (rect.top < window.innerHeight * 0.85) {
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }
+            });
+        });
+        
+        console.log('%c¡Portafolio de Kendry Núñez cargado correctamente!', 'color: #3b82f6; font-size: 14px; font-weight: bold');
+    </script>
+</body>
+</html>
